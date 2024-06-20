@@ -1,3 +1,5 @@
+package org.adler;
+
 class P9PalindromeNumber {
     public static void main(String[] args) {
         System.out.println("Problem 9 palindrome number");

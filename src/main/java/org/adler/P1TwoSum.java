@@ -1,3 +1,5 @@
+package org.adler;
+
 import java.util.Arrays;
 
 public class P1TwoSum {

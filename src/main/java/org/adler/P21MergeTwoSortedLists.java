@@ -1,3 +1,5 @@
+package org.adler;
+
 public class P21MergeTwoSortedLists {
     public static void main(String[] args) throws Exception {
         System.out.println("Problem 21");
