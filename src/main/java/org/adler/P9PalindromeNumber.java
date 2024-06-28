@@ -4,11 +4,17 @@ class P9PalindromeNumber {
     public static void main(String[] args) {
         System.out.println("Problem 9 palindrome number");
         System.out.println(isPalindrome(121));
-        System.out.println(isPalindrome(-121));
-        System.out.println(true);
+        System.out.println(isPalindrome(11));
     }
 
-    private static boolean isPalindrome(int x) {
-        return x == 121;
+    public static boolean isPalindrome(int x) {
+        if (x < 0) {
+            return false;
+        }
+
+        String tmpStr = String.valueOf(x);
+        String reversed = new StringBuilder(tmpStr).reverse().toString();
+
+        return tmpStr.equals(reversed);
     }
 }
