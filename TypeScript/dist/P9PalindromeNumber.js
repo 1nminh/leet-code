@@ -10,8 +10,9 @@ function isPalindrome(x) {
     }
     let str = x.toString();
     let revertStr = str.split("").reverse().join("");
-    if (str == revertStr)
+    if (str == revertStr) {
         return true;
+    }
     return false;
 }
 //# sourceMappingURL=P9PalindromeNumber.js.map

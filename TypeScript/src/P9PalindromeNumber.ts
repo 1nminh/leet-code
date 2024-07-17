@@ -4,15 +4,14 @@ console.log("Case 2: ", isPalindrome(-121));
 console.log("Case 3: ", isPalindrome(10));
 
 const newArr: (string | number)[] = [1, "2"];
-
 function isPalindrome(x: number): boolean {
   if (x < 0) {
     return false;
   }
   let str: string = x.toString();
   let revertStr: string = str.split("").reverse().join("");
-
-  if (str == revertStr) return true;
-
+  if (str == revertStr) {
+    return true;
+  }
   return false;
 }
