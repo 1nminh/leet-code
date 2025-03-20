@@ -15,14 +15,33 @@ public class P21MergeTwoSortedLists {
 
         printList(list1);
         printList(list2);
-        mergeTwoLists(list1, list2);
+
+        ListNode mergedList = mergeTwoLists(list1, list2);
+
+        printList(mergedList);
     }
 
     private static ListNode mergeTwoLists(ListNode list1, ListNode list2) {
-        ListNode mergListNode = new ListNode();
-        mergListNode.val = Math.min(list1.val, list2.val);
+        ListNode dummy = new ListNode();
+        ListNode current = dummy;
 
-        return mergListNode;
+        while (list1 != null && list2 != null) {
+            if (list1.val <= list2.val) {
+                current.next = list1;
+
+                list1 = list1.next;
+            } else {
+                current.next = list2;
+                list2 = list2.next;
+            }
+            current = current.next;
+        }
+        if (list1 != null) {
+            current.next = list1;
+        } else {
+            current.next = list2;
+        }
+        return dummy.next;
     }
 
     private static class ListNode {
@@ -44,12 +63,9 @@ public class P21MergeTwoSortedLists {
 
     public static void printList(ListNode node) {
         while (node != null) {
-            System.out.print(node.val);
-            if (node.next != null) {
-                System.out.print(" -> ");
-            }
+            System.out.print(node.val + " -> ");
             node = node.next;
         }
-        System.out.println();
+        System.out.println("null");
     }
 }
