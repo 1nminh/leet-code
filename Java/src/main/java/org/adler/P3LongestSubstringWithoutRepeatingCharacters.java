@@ -22,8 +22,7 @@ public class P3LongestSubstringWithoutRepeatingCharacters {
         int[] charIndex = new int[128]; // Assuming ASCII
         Arrays.fill(charIndex, -1); // Initialize all indices to -1
         for (int i = 0; i < s.length(); i++) {
-            char currentChar = s.charAt(i);
-            System.out.println("Current character: " + currentChar + ", Index: " + i + ", Start: " + start);
+            char currentChar = s.charAt(i);            
             // If the character has been seen and is within the current substring
             if (charIndex[currentChar] >= start) {
                 start = charIndex[currentChar] + 1; // Move start to the right of the last occurrence

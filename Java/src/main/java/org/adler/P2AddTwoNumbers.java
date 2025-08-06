@@ -1,20 +1,17 @@
 package org.adler;
 
-import java.util.Scanner;
-
-
 public class P2AddTwoNumbers {
     public static void main(String[] args) throws Exception {
         System.out.println("Problem 2");
         ListNode node13 = new ListNode(4);
         ListNode node12 = new ListNode(3, node13);
         ListNode node11 = new ListNode(2, node12);
-        ListNode l1 = new ListNode(1, node11);
+        new ListNode(1, node11);
 
         ListNode node23 = new ListNode(4);
         ListNode node22 = new ListNode(3, node23);
         ListNode node21 = new ListNode(2, node22);
-        ListNode l2 = new ListNode(1, node21);
+        new ListNode(1, node21);
     }
 
 
@@ -23,8 +20,8 @@ public class P2AddTwoNumbers {
         int val;
         ListNode next;
 
-        ListNode() {
-        }
+//        ListNode() {
+//        }
 
         ListNode(int val) {
             this.val = val;

@@ -11,11 +11,11 @@ public class P58LengthofLastWord {
     }
 
     public int lengthOfLastWord(String s) {        
-        s = s.trim();
-        s = s.substring(s.lastIndexOf(" ") + 1);
-        if (s.length() > 0) {
-            return s.length();
+        String trimmed = s.trim();
+        int lastSpaceIndex = trimmed.lastIndexOf(' ');
+        if (lastSpaceIndex == -1) {
+            return trimmed.length();
         }
-        return 0;
+        return trimmed.length() - lastSpaceIndex - 1;        
     }
 }
