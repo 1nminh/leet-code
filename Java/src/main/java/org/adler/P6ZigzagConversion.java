@@ -10,17 +10,13 @@ public class P6ZigzagConversion {
     }
 
     public static String convert(String s, int numRows) {
-        
         if (numRows <= 1 || s.length() <= numRows) {
             return s;
         }
-
         StringBuilder[] rows = new StringBuilder[Math.min(numRows, s.length())];
         for (int i = 0; i < rows.length; i++) {
             rows[i] = new StringBuilder();
         }
-
-
 
         return "";
     }
