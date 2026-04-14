@@ -1,6 +1,10 @@
 # macOS
 .DS_Store
 
-# Maven build output
+# IDE
+.idea/
+
+# Build output
 target/
+dist/
 node_modules/

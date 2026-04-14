@@ -1,0 +1,18 @@
+// Time: O(n), Space: O(1) // Approach: Two pointers from both ends
+export function maxArea(height: number[]): number {
+  let left = 0;
+  let right = height.length - 1;
+  let maxArea = 0;
+
+  while (left < right) {
+    const area = Math.min(height[left], height[right]) * (right - left);
+    maxArea = Math.max(area, maxArea);
+    if (height[left] < height[right]) {
+      left++;
+    } else {
+      right--;
+    }
+  }
+
+  return maxArea;
+}
